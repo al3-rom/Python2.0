@@ -26,8 +26,9 @@ calcular_area_rectangulo(2,6)
 # parámetro y la imprima en la consola.
 def imprimir_lista(lista):
     print(lista)
-# No se si esta bien!
-imprimir_lista([2,4,5])
+
+mi_lista = [1,2,3,4,5,6,7]
+imprimir_lista(mi_lista)
 
 # Crea una función llamada "es_par" que tome un número como
 # parámetro e imprima True si es par, o False si es impar.
@@ -97,14 +98,17 @@ def mostrar_info_persona(nombre,edad,ciudad):
     print("Su edad es: ",edad)
     print("Su ciudad es: ", ciudad)
 
-mostrar_info_persona("Alejandro",19,"Coma-Ruga")
+mostrar_info_persona(nombre="Alejandro", edad=19, ciudad="Coma_Ruga")
 
 # Escribe una función llamada "calcular_promedio" que tome una lista de
 # números como parámetro y calcule el promedio de esos números. Si no
 # se proporciona una lista, debe usar una lista vacía por defecto
 
-def calcular_promedio(numeros):
-    print("Promedio de los numeros:", numeros, "es:", sum(numeros)/len(numeros))
+def calcular_promedio(numeros = []):
+    if len(numeros) == 0:
+        print("Error")
+    else:
+     print("Promedio de los numeros:", numeros, "es:", sum(numeros)/len(numeros))
 
 calcular_promedio([2,3,3,5,7,10])
 
@@ -114,7 +118,7 @@ calcular_promedio([2,3,3,5,7,10])
 # exponente
 
 def calcular_potencia(base, exponente = 2):
-    print("La potencia de la base es:", base*exponente)
+    print("La potencia de la base es:", base**exponente)
 
 calcular_potencia(3)
 
@@ -126,6 +130,12 @@ calcular_potencia(3)
 
 def imprimir_info_alumno(nombre, edad = None, curso = None, promedio = None):
     print("Info sobre un alumno")
-    print(f"Su nombre: {nombre}, su edad: {edad}, su curso: {curso} y su promedio es: {promedio}")
-
-imprimir_info_alumno("Alejandro", 19, "ConquerBlocks", 6)
+    if edad is not None:
+        print(f"su edad: {edad}")
+    if nombre is not None:
+        print(f"Su nombre: {nombre}")
+    if curso is not None:
+        print(f"Su curso: {curso}")
+    if promedio is not None:
+        print(f"Su promedio: {promedio}")
+imprimir_info_alumno(nombre="Alejandro", edad=12,curso="ConquerBlocks", promedio=12.6 )
