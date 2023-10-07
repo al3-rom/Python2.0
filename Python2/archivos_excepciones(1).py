@@ -14,29 +14,22 @@ si comete un error ingresando texto en lugar de un número.
 
 print("Vamos a sumar los numeros!")
 
-# Si el usuario quiere salir del bucle:
-print("Introduce 's' para salir!")
-# El bucle es infinito hasta que el usuario no salga
 while True:
-    # Pedimos los numeros al usuario
-    numero1 = input("\nPrimer numero: ")
-    # Si el usuario quiere salir del bucle:
-    if numero1 == 's':
-        break
-    numero2 = input("Segundo numero: ")
-    
-    if numero2 == 's':
-        break
     try:
+    # Pedimos los numeros al usuario
+     numero1 = int(input("\nPrimer numero: "))
+     numero2 = int(input("Segundo numero: "))
+
     # Intentamos dar el resultado de la suma de los numeros
-        resultado = int(numero1) + int(numero2)
+     resultado = numero1 + numero2
+
+     print(resultado)
+     break
     # Imprimimos el error amigable si el usuario introducido una letra en vez de un numero
     except ValueError:
-        print("Has puesto una letra, introduce los numeros de nuevo!")
+        print("Error: Por favor, ingrese solo numeros enteros!")
     # Imprimimos el resultado si no falla nada
-    else:
-        print(resultado)
-
+   
 
  
     
