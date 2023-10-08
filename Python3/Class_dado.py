@@ -9,10 +9,7 @@ convenga usar el modulo random).
 import random 
 
 class dado:
-
-    def __init__(self):
-        pass
-
+    
     def hacer_tirada(self): 
         lanzamiento = random.randint(1,6)
         print("El resultado del lanzamiento es...", lanzamiento)

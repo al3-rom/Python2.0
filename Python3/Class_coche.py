@@ -7,14 +7,14 @@ simulae el encendido y apagado con una variable booleana).
 """
 
 class coche:
-    def __init__(self, marca, modelo, ano):
+    def __init__(self, marca, modelo, anio):
         self.marca = marca
         self.modelo = modelo
-        self.ano = ano
+        self.anio = anio
     
     def encender_apagar(self):
         while True:
-            print(f"La marca es: {self.marca}, el modelo es: {self.modelo}, es año del coche es: {self.ano}")
+            print(f"La marca es: {self.marca}, el modelo es: {self.modelo}, es año del coche es: {self.anio}")
             arrancar = input("Quieres arrancar el coche?")
             if arrancar == "si".lower():
                 apagar = input("El coche esta arrancado! Quieres apagarlo?")
@@ -28,5 +28,5 @@ class coche:
                 print("El coche sigue apagado!")
                 break
 
-bmw = coche("BMW", "M8", "2023")
+bmw = coche("BMW", "M8", 2023)
 bmw.encender_apagar()

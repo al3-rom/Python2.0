@@ -6,29 +6,22 @@ básicas.
 
 """
 
-class calculadora():
-    def __init__(self,numero1,numero2):
-        self.numero1 = numero1
-        self.numero2 = numero2
+class Calculadora():
+    def sumar(self, a, b):
+        return a + b
     
-    def sumar(self):
-        resultado = self.numero1 + self.numero2
-        print(resultado)
-    
-    def restar(self):
-        resultado = self.numero1 - self.numero2
-        print(resultado)
+    def restar(self, a, b):
+        return a - b
 
-    def multiplicar(self):
-        resultado = self.numero1 * self.numero2
-        print(resultado)
+    def multiplicar(self, a, b):
+        return a * b
 
-    def dividir(self):
-        resultado = self.numero1 / self.numero2
-        print(resultado)
+    def dividir(self, a, b):
+        return a / b
     
-numeros = calculadora(2,4)
-numeros.sumar()
-numeros.restar()
-numeros.multiplicar()
-numeros.dividir()
+calculadora = Calculadora()
+
+print(calculadora.sumar(4,5))
+print(calculadora.restar(8,4))
+print(calculadora.multiplicar(2,4))
+print(calculadora.dividir(8,2))

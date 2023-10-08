@@ -19,3 +19,6 @@ class persona:
 
 Alejandro = persona("Alejandro", "19", "Desarollador Full_Stack, desarollador Blockchain")
 Alejandro.detalles()
+
+Alex = persona("Alex", "22", "Full_stack developer")
+Alex.detalles()
