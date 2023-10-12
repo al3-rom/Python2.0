@@ -21,7 +21,7 @@ class Empleado:
         self.salario_base = salario_base
     
     def mostrar_empleado(self):
-        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base}")
+        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base}$")
     
 
 class EmpleadoTiempoCompleto(Empleado):
@@ -30,7 +30,7 @@ class EmpleadoTiempoCompleto(Empleado):
         self.bono_anual = bono_anual
     
     def mostrar_empleado(self):
-        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base} al mes y dispone a bono anual de {self.bono_anual}")
+        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base}$ al mes y dispone a bono anual de {self.bono_anual}")
         
 
 class EmpleadoTiempoParcial(Empleado):
@@ -39,10 +39,10 @@ class EmpleadoTiempoParcial(Empleado):
         self.horas_semana = horas_semana
     
     def salario_total(self):
-        return self.horas_semana * self.salario_base
+        return self.horas_semana * 4 * self.salario_base
     
     def mostrar_empleado(self):
-        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base} por hora, su salario total por {self.horas_semana} horas es {self.salario_total()}" )
+        print(f"El empleado {self.nombre} {self.apellido} cobra {self.salario_base}$ por hora, su salario total por {self.horas_semana * 4} horas en un mes es {self.salario_total()}" )
 
 empleado1 = Empleado("Alejandro","Romero",1250)
 empleado2 = EmpleadoTiempoCompleto("Alex", "Chitenco", 1500, 3000)
