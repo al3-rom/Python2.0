@@ -23,37 +23,35 @@ contexto de la programación y cómo se utiliza en Python.
 """
 
 class Pila:
-    def __init__(self,nombre_pila,cantidad):
-        self.nombre_pila = nombre_pila
-        self.cantidad = cantidad
+    def __init__(self):
+        self.items = []
+
+    def agregar_elementos(self,elemento):
+        self.items.append(elemento)
+
+    def quitar_elementos(self):
+        if not self.esta_vacia():
+            return self.items.pop()
+        else:
+            print("La pila esta vacia")
+
+    def esta_vacia(self):
+        return len(self.items) == 0
     
-    def mostrar_contenido(self):
-        print(f"La cantidad de pila {self.nombre_pila} actual es: {self.cantidad}")
-    
-    def agregar_elementos(self,nombre_pila,cantidad):
         
-        if self.nombre_pila == nombre_pila:
-            self.cantidad += cantidad
-
-        print("Has añadido con exito!")
-        print(f"La cantidad de pila {self.nombre_pila} actual es: {self.cantidad}")
-
-    def quitar_elementos(self,nombre_pila,cantidad):
-        if self.nombre_pila == nombre_pila:
-            self.cantidad -= cantidad
-        print(f"Has quitado una cantidad de: {cantidad} productos de tu pila con exito!")
-        print(f"La cantidad de pila {self.nombre_pila} actual es: {self.cantidad}")
-
-pila1 = Pila("Platos", 15)
-pila2 = Pila("Vasos", 10)
-
-pila1.mostrar_contenido()
-pila2.mostrar_contenido()
+    def mostrar_contenido(self):
+        print("Contenido de la pila:", self.items)
 
 
-pila1.agregar_elementos("Platos",15)
-pila2.agregar_elementos("Vasos",10)
+# Ejemplo de uso
 
-pila1.quitar_elementos("Platos",3)
-pila2.quitar_elementos("Vasos",5)
+pila = Pila()
 
+pila.agregar_elementos(5)
+pila.agregar_elementos(10)
+
+pila.mostrar_contenido()
+
+pila.quitar_elementos()
+
+pila.mostrar_contenido()

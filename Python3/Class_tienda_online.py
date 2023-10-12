@@ -24,7 +24,7 @@ class Tienda:
     def mostrar_inventario(self):
         print("Inventario de la tienda:")
         for producto in self.productos:
-            print(f'Nombre: {producto.nombre}, Precio: {producto.precio}, Cantidad: {producto.cantidad}')
+            print(f'Nombre: {producto.nombre}, Precio: {producto.precio} $, Cantidad: {producto.cantidad}')
 
     def realizar_compra(self, nombre_producto, cantidad):
         for producto in self.productos:
@@ -32,7 +32,7 @@ class Tienda:
                 if producto.cantidad >= cantidad:
                     producto.cantidad -= cantidad
                     total_precio = producto.precio * cantidad
-                    print(f'Compra exitosa. Total a pagar: {total_precio}')
+                    print(f'Compra exitosa. Total a pagar: {total_precio}$')
                 else:
                     print('No hay suficiente cantidad en stock para realizar esta compra.')
                 return
